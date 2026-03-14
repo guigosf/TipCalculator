@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Valor da refeição" VerticalTextAlignment="Center"/>
+                    
+            <Entry
+                x:Name="RefeicaoEntry"
+                Placeholder="Digite aqui o valor da refeição"
+                Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+              Text="Porcentagem da Gorjeta" VerticalTextAlignment="Center"/>
+
+                <Entry
+              x:Name="PorcentagemEntry"
+              Placeholder="30%"
+              Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+
+            <HorizontalStackLayout>
+                <Label
+              Text="Valor da Gorjeta" VerticalTextAlignment="Center"/>
+
+                <Entry
+              x:Name="GorjetaEntry"
+              Placeholder="Valor da Gorjeta"
+              Keyboard="Numeric"
+              IsEnabled="False"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+              Text="Valor Total" VerticalTextAlignment="Center"/>
+                <Entry
+              x:Name="ValorTotalEntry"
+              Placeholder="Valor total da refeição"
+              Keyboard="Numeric"
+              IsEnabled="False"
+              />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+              Text="Quantidade de pessoas" VerticalTextAlignment="Center"/>
+                <Entry
+              x:Name="QtdPessoasEntry"
+              Placeholder="Quantidade de pessoas"
+              Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+              Text="ValorPessoas" VerticalTextAlignment="Center"/>
+            <Entry
+              x:Name="ValorPorPessoaEntry"
+              Placeholder="Valor da refeição por pessoa"
+              Keyboard="Numeric"
+              IsEnabled="False"
+                />
+            </HorizontalStackLayout>
+
+
+                <Button
+                x:Name="CalcularButton"
+                Text="Calcular"
+                SemanticProperties.Hint="Calcula o valor"
+                Clicked="CalcularButton_Clicked"
+                />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+    

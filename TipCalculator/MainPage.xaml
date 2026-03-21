@@ -15,7 +15,8 @@
             <Entry
                 x:Name="RefeicaoEntry"
                 Placeholder="Digite aqui o valor da refeição"
-                Keyboard="Numeric"/>
+                Keyboard="Numeric"
+                WidthRequest="350"/>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -25,9 +26,22 @@
                 <Entry
               x:Name="PorcentagemEntry"
               Placeholder="30%"
-              Keyboard="Numeric"/>
+              Keyboard="Numeric"
+              WidthRequest="75"/>
             </HorizontalStackLayout>
 
+            <Slider Minimum="0"
+                    Maximum="100"
+                    x:Name="Porcentagem"
+                    SemanticProperties.Description="Porcentagem da Gorjeta"
+                    ValueChanged="Slider_ValueChanged"
+                    WidthRequest="150"
+                    />
+
+            <Label x:Name="displayLabel"
+                   Text="{Binding MeuNumero, StringFormat='{0:F2}'}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
 
             <HorizontalStackLayout>
                 <Label
@@ -73,7 +87,7 @@
             </HorizontalStackLayout>
 
 
-                <Button
+            <Button
                 x:Name="CalcularButton"
                 Text="Calcular"
                 SemanticProperties.Hint="Calcula o valor"

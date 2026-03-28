@@ -6,9 +6,16 @@
     xmlns:local="clr-namespace:TipCalculator"
     Title="TipCalculator">
 
-    <ShellContent
-        Title="Home"
+    <TabBar>
+        <ShellContent
+        Title="Calculadora de Gorjetas"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+        
+    <ShellContent
+        Title="Sobre o projeto"
+        ContentTemplate="{DataTemplate local:SobrePage}"
+        Route="SobrePage" />
+    </TabBar>
 
 </Shell>

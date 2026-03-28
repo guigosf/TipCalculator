@@ -38,7 +38,7 @@ namespace TipCalculator
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             double value = e.NewValue;
-            PorcentagemEntry.Text = value.ToString();
+            PorcentagemEntry.Text = value.ToString("F");
         }
     }
 }

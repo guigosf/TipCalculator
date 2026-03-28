@@ -30,7 +30,8 @@
               WidthRequest="75"/>
             </HorizontalStackLayout>
 
-            <Slider Minimum="0"
+            <HorizontalStackLayout>
+                <Slider Minimum="0"
                     Maximum="100"
                     x:Name="Porcentagem"
                     SemanticProperties.Description="Porcentagem da Gorjeta"
@@ -39,9 +40,9 @@
                     />
 
             <Label x:Name="displayLabel"
-                   Text="{Binding MeuNumero, StringFormat='{0:F2}'}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
